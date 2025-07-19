@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cálcula Watts</title>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho_menu">
+      <a class="cabecalho_menu_link" href="index.html">Home</a>
+      <a class="cabecalho_menu_link" href="about.html">Sobre mim</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Simulador de Consumo e Economia de Energia</h1>
+
+
+    <section id="formulario">
+      <h2>Informe o consumo de energia dos últimos 6 meses (em kWh):</h2>
+      <form id="consumo-form">
+        <div class="quant-meses">
+          <label for="mes1">Mês 1:</label>
+          <input type="number" id="mes1" min="0" required />
+
+          <label for="mes2">Mês 2:</label>
+          <input type="number" id="mes2" min="0" required />
+
+          <label for="mes3">Mês 3:</label>
+          <input type="number" id="mes3" min="0" required />
+
+          <label for="mes4">Mês 4:</label>
+          <input type="number" id="mes4" min="0" required />
+
+          <label for="mes5">Mês 5:</label>
+          <input type="number" id="mes5" min="0" required />
+
+          <label for="mes6">Mês 6:</label>
+          <input type="number" id="mes6" min="0" required />
+        </div>
+
+        <button type="submit">Gerar gráficos</button>
+      </form>
+    </section>
+
+
+    <section id="graficos" style="display:none;">
+      <h2>Resultados:</h2>
+
+      <div class="grafico-container">
+        <h3>Consumo de Energia (kWh)</h3>
+        <canvas id="graficoBarras"></canvas>
+      </div>
+
+      <div class="grafico-container">
+        <h3>Distribuição de Emissão de CO₂ (kg)</h3>
+        <canvas id="graficoPizza"></canvas>
+      </div>
+
+      <div class="grafico-container">
+        <h3>Economia com Placas Solares</h3>
+        <canvas id="graficoLinha"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <div class="rodape">
+    <footer>Links úteis para o esclarecimento:
+      <a class="rodapes" href="https://www.portalsolar.com.br/energia-solar">Energia Solar</a>
+      <a class="rodapes" href="https://carbonfreebrasil.com/qual-a-importancia-da-reducao-de-emissao-de-carbono-para-o-planeta/">Importância
+        do consumo consciente de e missão de carbono</a>
+    </footer>
+  </div>
+</body>
+
+</html>
